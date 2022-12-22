@@ -1,0 +1,82 @@
+{
+  "name": "nft-cam-tmp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mediapipe/camera_utils": "^0.3.1640029074",
+    "@mediapipe/control_utils": "^0.6.1629159505",
+    "@mediapipe/control_utils_3d": "^0.2.1625245254",
+    "@mediapipe/drawing_utils": "^0.3.1620248257",
+    "@mediapipe/pose": "^0.4.1633558788",
+    "@mui/material": "^5.2.8",
+    "@mui/styled-engine": "^5.2.6",
+    "@mui/x-data-grid": "^5.2.2",
+    "@testing-library/dom": "^8.11.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.24.0",
+    "chroma-js": "^2.1.2",
+    "gsap": "^3.9.1",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "node-sass": "^7.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.1.1",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.0",
+    "react-transition-group": "^4.4.2",
+    "simplebar-react": "^2.3.6",
+    "simplex-noise": "^3.0.1",
+    "smooth-scrollbar": "^8.7.3",
+    "three": "^0.135.0",
+    "three-gltf-loader": "^1.111.0",
+    "web3": "^1.6.1"
+  },
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "build": "webpack && rm -rf ../backend/public && cp -a ./dist/. ../backend/public",
+    "eslint-fix-js": "yarn eslint --fix 'src/**/*.js'",
+    "eslint-fix-jsx": "yarn eslint --fix 'src/**/*.jsx'",
+    "eslint-fix": "yarn eslint-fix-js && yarn eslint-fix-jsx",
+    "standard-fix": "yarn standard --fix",
+    "fix-code": "yarn eslint-fix && yarn standard-fix",
+    "setup": "yarn add standard eslint eslint-config-standard eslint-plugin-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-config-react-app eslint-plugin-flowtype eslint-plugin-react-hooks babel-eslint --dev && yarn fix-code && git add -A && git commit -m 'Takes care of installing devDependencies'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": [
+      "jest"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.48.0",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
+}

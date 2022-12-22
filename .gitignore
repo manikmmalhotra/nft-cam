@@ -1,0 +1,6 @@
+node_modules
+backend/.env
+backend/app.yaml
+backend/public
+.DS_Store
+*.swp
